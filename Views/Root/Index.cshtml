@@ -1,0 +1,24 @@
+﻿@section  scripts{ 
+    <script src="~/lib/vue/vue.js"></script>
+    <script src="~/js/index.js"></script>
+}
+
+    <div id="index-page">
+        <h2>{{ appName }}</h2>
+        <div>
+            {{ new Date().getFullYear() }}
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">{{product.brand}}</h3>
+                <p class="text-muted">{{product.category}}</p>
+                <p>{{product.name}}</p>
+                <p>Price: {{ product.price }} </p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">Buy</button>
+            <button class="btn btn btn-info">About</button>
+        </div>
+
+    </div>
