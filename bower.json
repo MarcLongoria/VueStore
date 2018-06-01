@@ -6,6 +6,7 @@
     "bootstrap": "4.1.1",
     "bootswatch": "4.1.1",
     "jquery": "3.3.1",
-    "components-font-awesome": "5.0.6"
+    "components-font-awesome": "5.0.6",
+    "axios": "0.18.0"
   }
 }

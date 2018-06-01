@@ -1,7 +1,9 @@
-﻿var x = new Vue({
+﻿var vm = new Vue({
     el: "#index-page",
     data: {
-        appName: "The Store",
+        appName: "Product List",
+        today: new Date(),
+        error: "",
         products: [{
             imageUrl: "/images/noimage.png",
             brand: "Shawn's Stuff",
@@ -28,7 +30,13 @@
     },
     methods: {
         onBuy: function (product) {
-            alert("Buying + " + product);
+            alert("Buying: " + product.name);
         }
+    },
+    mounted: function () {
+        //this.error = "You must call the API, it's not built yet...";
+        axios.get("/api/products")
+            .then(function (res) { this.products = res.data}).bind(this).catch(function () { this.error = "Could not load products" });
     }
+
 });
