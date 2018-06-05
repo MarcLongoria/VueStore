@@ -2,11 +2,13 @@
   "name": "mypackage",
   "private": true,
   "dependencies": {
-    "vue": "2.5.16",
     "bootstrap": "4.1.1",
     "bootswatch": "4.1.1",
     "jquery": "3.3.1",
     "components-font-awesome": "5.0.6",
-    "axios": "0.18.0"
+    "axios": "0.18.0",
+    "vue": "v2.5.16",
+    "Font-Awesome": "5.0.6",
+    "lodash": "4.17.10"
   }
 }

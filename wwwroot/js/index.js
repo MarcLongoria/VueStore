@@ -4,39 +4,22 @@
         appName: "Product List",
         today: new Date(),
         error: "",
-        products: [{
-            imageUrl: "/images/noimage.png",
-            brand: "Shawn's Stuff",
-            category: "Paper Products",
-            name: "Magic Writing Paper",
-            price: 12.99,
-            onSale: true
-        }, {
-            imageUrl: "/images/noimage.png",
-            brand: "Shawn's Stuff",
-            category: "Paper Products",
-            name: "Magic Writing Paper Two",
-            price: 15.99,
-            onSale: false
-        }, {
-            imageUrl: "/images/noimage.png",
-            brand: "Shawn's Stuff",
-            category: "Paper Products",
-            name: "Magic Writing Paper Three",
-            price: 12.99,
-            onSale: true
-        },
-        ]
+        products: [],
+        isBusy: false
     },
     methods: {
         onBuy: function (product) {
             alert("Buying: " + product.name);
+        },
+        SortBy: function (by) {
+            this.products = _.sortBy(this.products, by);
         }
     },
     mounted: function () {
         //this.error = "You must call the API, it's not built yet...";
+        isBusy = true;
         axios.get("/api/products")
-            .then(function (res) { this.products = res.data}).bind(this).catch(function () { this.error = "Could not load products" });
+            .then(function (res) { this.products = res.data.results; isBusy = false; }.bind(this)).catch(function () { this.error = "Could not load products"; isBusy = false; }.bind(this));
     }
 
 });
