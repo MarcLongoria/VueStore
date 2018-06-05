@@ -12,7 +12,9 @@
     <div v-if="isBusy" class="alert alert-info"><i class="fas fa-spinner fa-spin"></i>Loading...</div>
     <div v-if="error" class="alert alert-danger">{{ error }}</div>
 
-    <button class="btn btn-primary" v-on:click="SortBy('name')">Sort By Name</button><button class="btn btn-primary" v-on:click="SortBy('listPrice')">Sort By Price</button><a href="/checkout" class="btn btn-primary">Checkout</a>
+    <button class="btn btn-primary" v-on:click="SortBy('name')">Sort By Name</button>
+    <button class="btn btn-primary" v-on:click="SortBy('listPrice')">Sort By Price</button>
+    <a href="/checkout" class="btn btn-primary">Checkout</a>
     <div class="row">
         <div v-for="p in products" class="col-md-4">
             <div class="card">

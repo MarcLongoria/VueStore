@@ -7,8 +7,8 @@
     "jquery": "3.3.1",
     "components-font-awesome": "5.0.6",
     "axios": "0.18.0",
-    "vue": "v2.5.16",
     "Font-Awesome": "5.0.6",
-    "lodash": "4.17.10"
+    "lodash": "4.17.10",
+    "vue": "v2.5.16"
   }
 }
